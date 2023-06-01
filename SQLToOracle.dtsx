@@ -1,0 +1,2192 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/30/2023 7:42:28 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-MQ6849V"
+  DTS:CreatorName="DESKTOP-MQ6849V\User"
+  DTS:DTSID="{EBF3F39B-3482-4418-B8CA-F168553A7B63}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5209.0"
+  DTS:LocaleID="16394"
+  DTS:ObjectName="SQLToOracle"
+  DTS:PackageType="5"
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{27F9DCF5-1FE9-46B4-B7D3-7D288F6E17AD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[.\SQL.WideWorldImporters.sou_user1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4E843C9D-B61F-49DD-BBC1-AC8CA7B078C0}"
+      DTS:ObjectName=".\SQL.WideWorldImporters.sou_user1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.\SQLEXPRESS;User ID=sou_user1;Initial Catalog=WideWorldImporters;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-SQLToOracle-{4E843C9D-B61F-49DD-BBC1-AC8CA7B078C0}.\SQLEXPRESS.WideWorldImporters.sou_user1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANH8zLfT3ekWA9FKgKxItfwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADQrP2Q3hLPHQ4npszLbfrtMqt/lihw9LLqG1QHEcxMHAAAAAAOgAAAAAIAACAAAABhYAynwq6fNgd3FOHBvcXU+recqP6SqetUCReadIeuiCAAAAAI5WvO2LfDysJL/2fw12cFT4RasjtttrhZT+LMjMlKn0AAAAACrGJzO5sr2XYk3k1YYl5BKauKi0Na8CMzGgaHHVRC/uRouPDGsparsoPlk/4qY3CmreAjOrMsPbItj8MfWO7o</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DBOracle19c.usertest]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EEFEA62E-CAA4-4FCB-A42A-7B4E4F8FDC90}"
+      DTS:ObjectName="DBOracle19c.usertest">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DBTEST;User ID=usertest;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANH8zLfT3ekWA9FKgKxItfwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD5NJHK7LOJGjBgOV6uUo12pcMSqPKvVRNuWan5JaQ38QAAAAAOgAAAAAIAACAAAABWf4UtJPJ/r/wXqfEyMihLcyfDH+9XcZxZInV//kjMaiAAAAAsReZMh6JDoBjT1RcOQ1E7niV7vIAnuiadjXLHzwRyIEAAAADyLNiKcf1ApFwmiHUFHamsZVZ0v8lN+73E57LwNaB/WEVqFzqOTFV9FdfM1Zn7kYXsowzziYU4N7nQtBEVENV+</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Oracle Connection Manager 19c]"
+      DTS:CreationName="ORACLE"
+      DTS:Description="To connect Oracle 19c"
+      DTS:DTSID="{704DE6B8-63E0-42A1-9925-A0940E7A7008}"
+      DTS:ObjectName="Oracle Connection Manager 19c">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager>
+          <OraConnectionString>SERVER=DBTEST;USERNAME=usertest;WINAUTH=0;</OraConnectionString>
+          <OraPassword
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANH8zLfT3ekWA9FKgKxItfwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB++5ApivUvvOGu/sXZaQNwPacdbeLZaptkZP7NSgMCwgAAAAAOgAAAAAIAACAAAAAebg95d2/iKCm9oPqnyja4QaudnV5bXPcX5tyUueZVciAAAAC8oEj1xWetj/ghY4cbTtH5w+KFtxTBqvZfkguXbnts6kAAAABg4khekGYPtzlfXYM6JJhpKiyNuUK9fa/ojA9SapOuzMOwYOeP72PzG6jEppvfEVa5xM3mdPBIlwlcI+Ic4tGI</OraPassword>
+          <OraRetain>False</OraRetain>
+          <OraInitialCatalog></OraInitialCatalog>
+          <OraServerName>DBTEST</OraServerName>
+          <OraUserName>usertest</OraUserName>
+          <OraOracleHome></OraOracleHome>
+          <OraOracleHome64></OraOracleHome64>
+          <OraWinAuthentication>False</OraWinAuthentication>
+          <OraEnableDetailedTracing>False</OraEnableDetailedTracing>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task - Load Oracle tables 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B7D7F481-FC38-4073-BA3B-0FF32930BD95}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task - Load Oracle tables 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Inputs[Data Conversion Input].Columns[UserPreferences]"
+                      cachedDataType="nText"
+                      cachedName="UserPreferences"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[UserPreferences]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Inputs[Data Conversion Input].Columns[CustomFields]"
+                      cachedDataType="nText"
+                      cachedName="CustomFields"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[CustomFields]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Inputs[Data Conversion Input].Columns[OtherLanguages]"
+                      cachedDataType="nText"
+                      cachedName="OtherLanguages"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[OtherLanguages]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Inputs[Data Conversion Input].Columns[ValidFrom]"
+                      cachedDataType="dbTimeStamp2"
+                      cachedName="ValidFrom"
+                      cachedScale="7"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[ValidFrom]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of UserPreferences]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of UserPreferences]"
+                      name="Copy of UserPreferences"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[UserPreferences]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomFields]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomFields]"
+                      name="Copy of CustomFields"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[CustomFields]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of OtherLanguages]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of OtherLanguages]"
+                      name="Copy of OtherLanguages"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[OtherLanguages]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ValidFrom]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ValidFrom]"
+                      name="Copy of ValidFrom"
+                      scale="7"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[ValidFrom]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source - WWI_SQLServer_Application_People"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Application].[People]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[.\SQL.WideWorldImporters.sou_user1]"
+                  connectionManagerRefId="Package.ConnectionManagers[.\SQL.WideWorldImporters.sou_user1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[PersonID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[PersonID]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[PersonID]"
+                      name="PersonID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[FullName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[FullName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[FullName]"
+                      name="FullName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[PreferredName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[PreferredName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[PreferredName]"
+                      name="PreferredName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[SearchName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[SearchName]"
+                      length="101"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[SearchName]"
+                      name="SearchName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsPermittedToLogon]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[IsPermittedToLogon]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsPermittedToLogon]"
+                      name="IsPermittedToLogon"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[LogonName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[LogonName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[LogonName]"
+                      name="LogonName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsExternalLogonProvider]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[IsExternalLogonProvider]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsExternalLogonProvider]"
+                      name="IsExternalLogonProvider"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[HashedPassword]"
+                      dataType="image"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[HashedPassword]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[HashedPassword]"
+                      name="HashedPassword"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsSystemUser]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[IsSystemUser]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsSystemUser]"
+                      name="IsSystemUser"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsEmployee]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[IsEmployee]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsEmployee]"
+                      name="IsEmployee"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsSalesperson]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[IsSalesperson]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsSalesperson]"
+                      name="IsSalesperson"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[UserPreferences]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[UserPreferences]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[UserPreferences]"
+                      name="UserPreferences"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[PhoneNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[PhoneNumber]"
+                      length="20"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[PhoneNumber]"
+                      name="PhoneNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[FaxNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[FaxNumber]"
+                      length="20"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[FaxNumber]"
+                      name="FaxNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[EmailAddress]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[EmailAddress]"
+                      length="256"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[EmailAddress]"
+                      name="EmailAddress"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[Photo]"
+                      dataType="image"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[Photo]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[Photo]"
+                      name="Photo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[CustomFields]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[CustomFields]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[CustomFields]"
+                      name="CustomFields"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[OtherLanguages]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[OtherLanguages]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[OtherLanguages]"
+                      name="OtherLanguages"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[LastEditedBy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[LastEditedBy]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[LastEditedBy]"
+                      name="LastEditedBy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[ValidFrom]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[ValidFrom]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[ValidFrom]"
+                      name="ValidFrom"
+                      scale="7"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[ValidTo]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[ValidTo]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[ValidTo]"
+                      name="ValidTo"
+                      scale="7"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[PersonID]"
+                      dataType="i4"
+                      name="PersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[FullName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FullName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[PreferredName]"
+                      dataType="wstr"
+                      length="50"
+                      name="PreferredName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[SearchName]"
+                      dataType="wstr"
+                      length="101"
+                      name="SearchName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[IsPermittedToLogon]"
+                      dataType="bool"
+                      name="IsPermittedToLogon" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[LogonName]"
+                      dataType="wstr"
+                      length="50"
+                      name="LogonName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[IsExternalLogonProvider]"
+                      dataType="bool"
+                      name="IsExternalLogonProvider" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[HashedPassword]"
+                      dataType="image"
+                      name="HashedPassword" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[IsSystemUser]"
+                      dataType="bool"
+                      name="IsSystemUser" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[IsEmployee]"
+                      dataType="bool"
+                      name="IsEmployee" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[IsSalesperson]"
+                      dataType="bool"
+                      name="IsSalesperson" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[UserPreferences]"
+                      dataType="nText"
+                      name="UserPreferences" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[PhoneNumber]"
+                      dataType="wstr"
+                      length="20"
+                      name="PhoneNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[FaxNumber]"
+                      dataType="wstr"
+                      length="20"
+                      name="FaxNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[EmailAddress]"
+                      dataType="wstr"
+                      length="256"
+                      name="EmailAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[Photo]"
+                      dataType="image"
+                      name="Photo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[CustomFields]"
+                      dataType="nText"
+                      name="CustomFields" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[OtherLanguages]"
+                      dataType="nText"
+                      name="OtherLanguages" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[LastEditedBy]"
+                      dataType="i4"
+                      name="LastEditedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[ValidFrom]"
+                      dataType="dbTimeStamp2"
+                      name="ValidFrom"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].ExternalColumns[ValidTo]"
+                      dataType="dbTimeStamp2"
+                      name="ValidTo"
+                      scale="7" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[PersonID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[PersonID]"
+                      name="PersonID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[FullName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[FullName]"
+                      name="FullName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[PreferredName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[PreferredName]"
+                      name="PreferredName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[SearchName]"
+                      dataType="wstr"
+                      length="101"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[SearchName]"
+                      name="SearchName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[IsPermittedToLogon]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[IsPermittedToLogon]"
+                      name="IsPermittedToLogon" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[LogonName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[LogonName]"
+                      name="LogonName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[IsExternalLogonProvider]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[IsExternalLogonProvider]"
+                      name="IsExternalLogonProvider" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[HashedPassword]"
+                      dataType="image"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[HashedPassword]"
+                      name="HashedPassword" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[IsSystemUser]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[IsSystemUser]"
+                      name="IsSystemUser" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[IsEmployee]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[IsEmployee]"
+                      name="IsEmployee" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[IsSalesperson]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[IsSalesperson]"
+                      name="IsSalesperson" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[UserPreferences]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[UserPreferences]"
+                      name="UserPreferences" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[PhoneNumber]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[PhoneNumber]"
+                      name="PhoneNumber" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[FaxNumber]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[FaxNumber]"
+                      name="FaxNumber" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[EmailAddress]"
+                      dataType="wstr"
+                      length="256"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[EmailAddress]"
+                      name="EmailAddress" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[Photo]"
+                      dataType="image"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[Photo]"
+                      name="Photo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[CustomFields]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[CustomFields]"
+                      name="CustomFields" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[OtherLanguages]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[OtherLanguages]"
+                      name="OtherLanguages" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[LastEditedBy]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[LastEditedBy]"
+                      name="LastEditedBy" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[ValidFrom]"
+                      dataType="dbTimeStamp2"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[ValidFrom]"
+                      name="ValidFrom"
+                      scale="7" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[ValidTo]"
+                      dataType="dbTimeStamp2"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[ValidTo]"
+                      name="ValidTo"
+                      scale="7" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE"
+              componentClassID="Microsoft.SSISOracleDst"
+              contactInfo="Oracle Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Oracle Destination"
+              name="Oracle Destination - DBTEST_USERTEST_PEOPLE"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"USERTEST"."PEOPLE"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Apply conventional bulk load."
+                  name="FastLoad">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum errors allowed."
+                  expressionType="Notify"
+                  name="MaxErrors">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Disables target table logging. Used to minimize the amount of redo generated."
+                  expressionType="Notify"
+                  name="NoLogging">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Enables parallel loading of the target table."
+                  expressionType="Notify"
+                  name="Parallel">false</property>
+                <property
+                  dataType="System.String"
+                  description="Table sub-name (Partition, SubPartition)."
+                  expressionType="Notify"
+                  name="TableSubname"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Transfer data buffer size (KB)."
+                  expressionType="Notify"
+                  name="TransferBufferSize">64</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Connections[ORACLEConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Oracle Connection Manager 19c]"
+                  connectionManagerRefId="Package.ConnectionManagers[Oracle Connection Manager 19c]"
+                  description="The ORACLE runtime connection used to access the database."
+                  name="ORACLEConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Oracle Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[PersonID]"
+                      cachedDataType="i4"
+                      cachedName="PersonID"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[PERSONID]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[PersonID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[FullName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FullName"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[FULLNAME]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[FullName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[PreferredName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="PreferredName"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[PREFERREDNAME]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[PreferredName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[SearchName]"
+                      cachedDataType="wstr"
+                      cachedLength="101"
+                      cachedName="SearchName"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[SEARCHNAME]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[SearchName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[IsPermittedToLogon]"
+                      cachedDataType="bool"
+                      cachedName="IsPermittedToLogon"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[ISPERMITTEDTOLOGON]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsPermittedToLogon]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[LogonName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="LogonName"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[LOGONNAME]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[LogonName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[IsExternalLogonProvider]"
+                      cachedDataType="bool"
+                      cachedName="IsExternalLogonProvider"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[ISEXTERNALLOGONPROVIDER]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsExternalLogonProvider]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[HashedPassword]"
+                      cachedDataType="image"
+                      cachedName="HashedPassword"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[HASHEDPASSWORD]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[HashedPassword]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[IsSystemUser]"
+                      cachedDataType="bool"
+                      cachedName="IsSystemUser"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[ISSYSTEMUSER]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsSystemUser]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[IsEmployee]"
+                      cachedDataType="bool"
+                      cachedName="IsEmployee"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[ISEMPLOYEE]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsEmployee]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[IsSalesperson]"
+                      cachedDataType="bool"
+                      cachedName="IsSalesperson"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[ISSALESPERSON]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[IsSalesperson]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[PhoneNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="PhoneNumber"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[PHONENUMBER]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[PhoneNumber]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[FaxNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="FaxNumber"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[FAXNUMBER]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[FaxNumber]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[EmailAddress]"
+                      cachedDataType="wstr"
+                      cachedLength="256"
+                      cachedName="EmailAddress"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[EMAILADDRESS]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[EmailAddress]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[Photo]"
+                      cachedDataType="image"
+                      cachedName="Photo"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[PHOTO]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[Photo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[LastEditedBy]"
+                      cachedDataType="i4"
+                      cachedName="LastEditedBy"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[LASTEDITEDBY]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output].Columns[LastEditedBy]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[Copy of UserPreferences]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Copy of UserPreferences"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[USERPREFERENCES]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of UserPreferences]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[Copy of CustomFields]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Copy of CustomFields"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[CUSTOMFIELDS]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CustomFields]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[Copy of OtherLanguages]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Copy of OtherLanguages"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[OTHERLANGUAGES]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of OtherLanguages]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].Columns[Copy of ValidFrom]"
+                      cachedDataType="cy"
+                      cachedName="Copy of ValidFrom"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[VALIDFROM]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ValidFrom]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[PERSONID]"
+                      dataType="numeric"
+                      name="PERSONID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[FULLNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FULLNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[PREFERREDNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PREFERREDNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[SEARCHNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4000"
+                      name="SEARCHNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[ISPERMITTEDTOLOGON]"
+                      dataType="numeric"
+                      name="ISPERMITTEDTOLOGON"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[LOGONNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LOGONNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[ISEXTERNALLOGONPROVIDER]"
+                      dataType="numeric"
+                      name="ISEXTERNALLOGONPROVIDER"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[HASHEDPASSWORD]"
+                      dataType="image"
+                      name="HASHEDPASSWORD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[ISSYSTEMUSER]"
+                      dataType="numeric"
+                      name="ISSYSTEMUSER"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[ISEMPLOYEE]"
+                      dataType="numeric"
+                      name="ISEMPLOYEE"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[ISSALESPERSON]"
+                      dataType="numeric"
+                      name="ISSALESPERSON"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[USERPREFERENCES]"
+                      codePage="1252"
+                      dataType="text"
+                      name="USERPREFERENCES" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[PHONENUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PHONENUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[FAXNUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="FAXNUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[EMAILADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="256"
+                      name="EMAILADDRESS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[PHOTO]"
+                      dataType="image"
+                      name="PHOTO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[CUSTOMFIELDS]"
+                      codePage="1252"
+                      dataType="text"
+                      name="CUSTOMFIELDS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[OTHERLANGUAGES]"
+                      codePage="1252"
+                      dataType="text"
+                      name="OTHERLANGUAGES" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[LASTEDITEDBY]"
+                      dataType="numeric"
+                      name="LASTEDITEDBY"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[VALIDFROM]"
+                      dataType="dbTimeStamp"
+                      name="VALIDFROM" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input].ExternalColumns[VALIDTO]"
+                      dataType="dbTimeStamp"
+                      name="VALIDTO" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Outputs[Oracle Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Oracle Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Outputs[Oracle Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Outputs[Oracle Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Outputs[Oracle Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Outputs[Oracle Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task - Load Oracle tables 1.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE.Inputs[Oracle Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task - Load Oracle tables 1.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task - Load Oracle tables 1\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task - Load Oracle tables 2"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{41F08B9D-7613-41B4-97AA-7AF3F8BA6835}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task - Load Oracle tables 2"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Inputs[Data Conversion Input].Columns[Comments]"
+                      cachedDataType="nText"
+                      cachedName="Comments"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[Comments]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Inputs[Data Conversion Input].Columns[InternalComments]"
+                      cachedDataType="nText"
+                      cachedName="InternalComments"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[InternalComments]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Inputs[Data Conversion Input].Columns[LastEditedWhen]"
+                      cachedDataType="dbTimeStamp2"
+                      cachedName="LastEditedWhen"
+                      cachedScale="7"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[LastEditedWhen]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Comments]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Comments]"
+                      name="Copy of Comments"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[Comments]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of InternalComments]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of InternalComments]"
+                      name="Copy of InternalComments"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[InternalComments]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LastEditedWhen]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LastEditedWhen]"
+                      name="Copy of LastEditedWhen"
+                      scale="7"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[LastEditedWhen]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source - WWI_SQLServer_Application_PurchaseOrders"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Purchasing].[PurchaseOrders]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[.\SQL.WideWorldImporters.sou_user1]"
+                  connectionManagerRefId="Package.ConnectionManagers[.\SQL.WideWorldImporters.sou_user1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[LastEditedBy]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[LastEditedBy]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[LastEditedBy]"
+                      name="LastEditedBy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[PurchaseOrderID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[PurchaseOrderID]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[PurchaseOrderID]"
+                      name="PurchaseOrderID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[SupplierID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[SupplierID]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[SupplierID]"
+                      name="SupplierID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[OrderDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[OrderDate]"
+                      name="OrderDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[DeliveryMethodID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[DeliveryMethodID]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[DeliveryMethodID]"
+                      name="DeliveryMethodID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[ContactPersonID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[ContactPersonID]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[ContactPersonID]"
+                      name="ContactPersonID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[ExpectedDeliveryDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[ExpectedDeliveryDate]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[ExpectedDeliveryDate]"
+                      name="ExpectedDeliveryDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[SupplierReference]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[SupplierReference]"
+                      length="20"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[SupplierReference]"
+                      name="SupplierReference"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[IsOrderFinalized]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[IsOrderFinalized]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[IsOrderFinalized]"
+                      name="IsOrderFinalized"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[Comments]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[Comments]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[Comments]"
+                      name="Comments"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[InternalComments]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[InternalComments]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[InternalComments]"
+                      name="InternalComments"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[LastEditedWhen]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[LastEditedWhen]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[LastEditedWhen]"
+                      name="LastEditedWhen"
+                      scale="7"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[LastEditedBy]"
+                      dataType="i4"
+                      name="LastEditedBy" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[PurchaseOrderID]"
+                      dataType="i4"
+                      name="PurchaseOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[SupplierID]"
+                      dataType="i4"
+                      name="SupplierID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
+                      dataType="dbDate"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[DeliveryMethodID]"
+                      dataType="i4"
+                      name="DeliveryMethodID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[ContactPersonID]"
+                      dataType="i4"
+                      name="ContactPersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[ExpectedDeliveryDate]"
+                      dataType="dbDate"
+                      name="ExpectedDeliveryDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[SupplierReference]"
+                      dataType="wstr"
+                      length="20"
+                      name="SupplierReference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[IsOrderFinalized]"
+                      dataType="bool"
+                      name="IsOrderFinalized" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[Comments]"
+                      dataType="nText"
+                      name="Comments" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[InternalComments]"
+                      dataType="nText"
+                      name="InternalComments" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].ExternalColumns[LastEditedWhen]"
+                      dataType="dbTimeStamp2"
+                      name="LastEditedWhen"
+                      scale="7" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[PurchaseOrderID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[PurchaseOrderID]"
+                      name="PurchaseOrderID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[SupplierID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[SupplierID]"
+                      name="SupplierID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
+                      name="OrderDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[DeliveryMethodID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[DeliveryMethodID]"
+                      name="DeliveryMethodID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[ContactPersonID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[ContactPersonID]"
+                      name="ContactPersonID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[ExpectedDeliveryDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[ExpectedDeliveryDate]"
+                      name="ExpectedDeliveryDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[SupplierReference]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[SupplierReference]"
+                      name="SupplierReference" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[IsOrderFinalized]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[IsOrderFinalized]"
+                      name="IsOrderFinalized" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[Comments]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[Comments]"
+                      name="Comments" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[InternalComments]"
+                      dataType="nText"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[InternalComments]"
+                      name="InternalComments" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[LastEditedBy]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[LastEditedBy]"
+                      name="LastEditedBy" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[LastEditedWhen]"
+                      dataType="dbTimeStamp2"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[LastEditedWhen]"
+                      name="LastEditedWhen"
+                      scale="7" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS"
+              componentClassID="Microsoft.SSISOracleDst"
+              contactInfo="Oracle Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Oracle Destination"
+              name="Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"USERTEST"."PURCHASEORDERS"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Apply conventional bulk load."
+                  name="FastLoad">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum errors allowed."
+                  expressionType="Notify"
+                  name="MaxErrors">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Disables target table logging. Used to minimize the amount of redo generated."
+                  expressionType="Notify"
+                  name="NoLogging">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Enables parallel loading of the target table."
+                  expressionType="Notify"
+                  name="Parallel">false</property>
+                <property
+                  dataType="System.String"
+                  description="Table sub-name (Partition, SubPartition)."
+                  expressionType="Notify"
+                  name="TableSubname"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Transfer data buffer size (KB)."
+                  expressionType="Notify"
+                  name="TransferBufferSize">64</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Connections[ORACLEConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Oracle Connection Manager 19c]"
+                  connectionManagerRefId="Package.ConnectionManagers[Oracle Connection Manager 19c]"
+                  description="The ORACLE runtime connection used to access the database."
+                  name="ORACLEConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Oracle Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].Columns[LastEditedBy]"
+                      cachedDataType="i4"
+                      cachedName="LastEditedBy"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[LASTEDITEDBY]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[LastEditedBy]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].Columns[PurchaseOrderID]"
+                      cachedDataType="i4"
+                      cachedName="PurchaseOrderID"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[PURCHASEORDERID]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[PurchaseOrderID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].Columns[SupplierID]"
+                      cachedDataType="i4"
+                      cachedName="SupplierID"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[SUPPLIERID]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[SupplierID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].Columns[OrderDate]"
+                      cachedDataType="dbDate"
+                      cachedName="OrderDate"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[ORDERDATE]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[OrderDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].Columns[DeliveryMethodID]"
+                      cachedDataType="i4"
+                      cachedName="DeliveryMethodID"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[DELIVERYMETHODID]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[DeliveryMethodID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].Columns[ContactPersonID]"
+                      cachedDataType="i4"
+                      cachedName="ContactPersonID"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[CONTACTPERSONID]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[ContactPersonID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].Columns[ExpectedDeliveryDate]"
+                      cachedDataType="dbDate"
+                      cachedName="ExpectedDeliveryDate"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[EXPECTEDDELIVERYDATE]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[ExpectedDeliveryDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].Columns[SupplierReference]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="SupplierReference"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[SUPPLIERREFERENCE]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[SupplierReference]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].Columns[IsOrderFinalized]"
+                      cachedDataType="bool"
+                      cachedName="IsOrderFinalized"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[ISORDERFINALIZED]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output].Columns[IsOrderFinalized]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].Columns[Copy of Comments]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Copy of Comments"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[COMMENTS]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Comments]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].Columns[Copy of InternalComments]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Copy of InternalComments"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[INTERNALCOMMENTS]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of InternalComments]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].Columns[Copy of LastEditedWhen]"
+                      cachedDataType="dbTimeStamp2"
+                      cachedName="Copy of LastEditedWhen"
+                      cachedScale="7"
+                      externalMetadataColumnId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[LASTEDITEDWHEN]"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LastEditedWhen]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[PURCHASEORDERID]"
+                      dataType="numeric"
+                      name="PURCHASEORDERID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[SUPPLIERID]"
+                      dataType="numeric"
+                      name="SUPPLIERID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[ORDERDATE]"
+                      dataType="dbTimeStamp"
+                      name="ORDERDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[DELIVERYMETHODID]"
+                      dataType="numeric"
+                      name="DELIVERYMETHODID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[CONTACTPERSONID]"
+                      dataType="numeric"
+                      name="CONTACTPERSONID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[EXPECTEDDELIVERYDATE]"
+                      dataType="dbTimeStamp"
+                      name="EXPECTEDDELIVERYDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[SUPPLIERREFERENCE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="SUPPLIERREFERENCE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[ISORDERFINALIZED]"
+                      dataType="numeric"
+                      name="ISORDERFINALIZED"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[COMMENTS]"
+                      codePage="1252"
+                      dataType="text"
+                      name="COMMENTS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[INTERNALCOMMENTS]"
+                      codePage="1252"
+                      dataType="text"
+                      name="INTERNALCOMMENTS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[LASTEDITEDBY]"
+                      dataType="numeric"
+                      name="LASTEDITEDBY"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input].ExternalColumns[LASTEDITEDWHEN]"
+                      dataType="dbTimeStamp"
+                      name="LASTEDITEDWHEN" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Outputs[Oracle Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Oracle Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Outputs[Oracle Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Outputs[Oracle Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Outputs[Oracle Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Outputs[Oracle Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task - Load Oracle tables 2.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS.Inputs[Oracle Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task - Load Oracle tables 2.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task - Load Oracle tables 2\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL - Truncate tables Oracle"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{8FB36B94-E4D7-4E1C-986E-CF6C0E9BA9DE}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL - Truncate tables Oracle"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EEFEA62E-CAA4-4FCB-A42A-7B4E4F8FDC90}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="begin&#xA; execute immediate 'truncate table USERTEST.people';&#xA; execute immediate 'truncate table USERTEST.PURCHASEORDERS';&#xA;end;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{0E27E6C0-1FE6-4A1B-A8BD-844EAFED7960}"
+      DTS:From="Package\Tarea Ejecutar SQL - Truncate tables Oracle"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Data Flow Task - Load Oracle tables 1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{105BD300-41F7-49D1-99A5-456FA7771A2E}"
+      DTS:From="Package\Tarea Ejecutar SQL - Truncate tables Oracle"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\Data Flow Task - Load Oracle tables 2" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="266,42"
+          Id="Package\Data Flow Task - Load Oracle tables 1"
+          TopLeft="94,152" />
+        <NodeLayout
+          Size="297,42"
+          Id="Package\Tarea Ejecutar SQL - Truncate tables Oracle"
+          TopLeft="158,40" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="258.333333333333,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-31.3333333333333,70"
+              Start="0,0"
+              End="-31.3333333333333,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.2250502344273" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.2250502344273"
+                    Point2="0,28.2250502344273"
+                    Point3="-4,28.2250502344273" />
+                  <mssgle:LineSegment
+                    End="-27.3333333333333,28.2250502344273" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27.3333333333333,28.2250502344273"
+                    Point2="-31.3333333333333,28.2250502344273"
+                    Point3="-31.3333333333333,32.2250502344273" />
+                  <mssgle:LineSegment
+                    End="-31.3333333333333,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="266,42"
+          Id="Package\Data Flow Task - Load Oracle tables 2"
+          TopLeft="387,152" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="354.666666666667,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="165.333333333333,70"
+              Start="0,0"
+              End="165.333333333333,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.2250502344273" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.2250502344273"
+                    Point2="0,28.2250502344273"
+                    Point3="4,28.2250502344273" />
+                  <mssgle:LineSegment
+                    End="161.333333333333,28.2250502344273" />
+                  <mssgle:CubicBezierSegment
+                    Point1="161.333333333333,28.2250502344273"
+                    Point2="165.333333333333,28.2250502344273"
+                    Point3="165.333333333333,32.2250502344273" />
+                  <mssgle:LineSegment
+                    End="165.333333333333,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Source: SQL Server 2022 Target: Oracle 19c"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="162,60"
+          Id="32159a4f-5fbb-4121-a831-cedbc951a3c3"
+          TopLeft="535,36" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task - Load Oracle tables 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="337,42"
+          Id="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE"
+          TopLeft="208,261" />
+        <NodeLayout
+          Size="351,42"
+          Id="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People"
+          TopLeft="190,100" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Data Flow Task - Load Oracle tables 1\Data Conversion"
+          TopLeft="302,176" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Load Oracle tables 1.Paths[OLE DB Source Output]"
+          TopLeft="365.5,142">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17,34"
+              Start="0,0"
+              End="17,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="13,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13,17"
+                    Point2="17,17"
+                    Point3="17,21" />
+                  <mssgle:LineSegment
+                    End="17,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - Load Oracle tables 1.Paths[Data Conversion Output]"
+          TopLeft="379.5,218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="text stream DT_TEXT for insert into Oracle table (CLOB field)"
+          ParentId="Package\Data Flow Task - Load Oracle tables 1"
+          FontInfo="{assembly:Null}"
+          Size="200,60"
+          Id="e5887ecf-1412-40eb-a3ec-08f5fee365e1"
+          TopLeft="482,171" />
+        <AnnotationLayout
+          Text="database timestamp with precision [DT_DBTIMESTAMP2] for insert into Oracle table (TIMESTAMP(6) )"
+          ParentId="Package\Data Flow Task - Load Oracle tables 1"
+          FontInfo="{assembly:Null}"
+          Size="200,88"
+          Id="9bacc209-ab86-47e7-9be7-1a3bbf955c94"
+          TopLeft="93,165" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Load Oracle tables 1\OLE DB Source - WWI_SQLServer_Application_People">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Load Oracle tables 1\Oracle Destination - DBTEST_USERTEST_PEOPLE">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task - Load Oracle tables 2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="397,42"
+          Id="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Data Flow Task - Load Oracle tables 2\Data Conversion"
+          TopLeft="190,149" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Load Oracle tables 2.Paths[OLE DB Source Output]"
+          TopLeft="258.5,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12,47"
+              Start="0,0"
+              End="12,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="4,23.5" />
+                  <mssgle:LineSegment
+                    End="8,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8,23.5"
+                    Point2="12,23.5"
+                    Point3="12,27.5" />
+                  <mssgle:LineSegment
+                    End="12,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="401,42"
+          Id="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS"
+          TopLeft="114,261" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Load Oracle tables 2.Paths[Data Conversion Output]"
+          TopLeft="270.5,191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="44,70"
+              Start="0,0"
+              End="44,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31"
+                    Point2="0,35"
+                    Point3="4,35" />
+                  <mssgle:LineSegment
+                    End="40,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40,35"
+                    Point2="44,35"
+                    Point3="44,39" />
+                  <mssgle:LineSegment
+                    End="44,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Load Oracle tables 2\OLE DB Source - WWI_SQLServer_Application_PurchaseOrders">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Load Oracle tables 2\Oracle Destination - DBTEST_USERTEST_PURCHASEORDERS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
