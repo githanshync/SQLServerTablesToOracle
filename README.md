@@ -19,3 +19,15 @@ In connection manager:
 -	Update the "Server or file name" field with your server name or ip and instance (source database): [SERVER1]/[MSSQLSERVER]
 -	Update the "tns service name" field (target database). 
 -	And update the password for the user USERTEST in the password field.
+
+*Control flow:*
+
+![Control Flow](https://github.com/githanshync/SQLServerTablesToOracle/blob/master/-img/ControlFlow.JPG)
+
+*Data Flow 1:*
+
+![Control Flow](https://github.com/githanshync/SQLServerTablesToOracle/blob/master/-img/DataFlow1.JPG)
+
+*Data Flow 2:*
+
+![Control Flow](https://github.com/githanshync/SQLServerTablesToOracle/blob/master/-img/DataFlow2.JPG)
