@@ -1,4 +1,4 @@
-# SQL Server Tables to Oracle.
+# From SQL Server Tables to Oracle.
 Example of migration of SQL Server tables to Oracle via SSIS.
 ## Minimum requirements:
 -	Visual Studio 2022 (import solution SQLServerTablesToOracle).
